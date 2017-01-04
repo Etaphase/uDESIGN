@@ -1,0 +1,130 @@
+====================
+operation *
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(5.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(5.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(5.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(10.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(3.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(15.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(3.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(15.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(15.0 ex)
+rhs:Unum{3,5}(15.0 ex)
+res:Unum{3,5}(30.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(5.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(0.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(5.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(3.0 ex)
+rhs:Unum{3,5}(5.0 ex)
+res:Unum{3,5}(15.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(0.0 ex)
+rhs:Unum{3,5}(15.0 ex)
+res:Unum{3,5}(15.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(2.0 ex)
+rhs:Unum{3,5}(6.0 ex)
+res:Unum{3,5}(12.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(5.0 ex)
+rhs:Unum{3,5}(12.0 ex)
+res:Unum{3,5}(17.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(4.0 ex)
+rhs:Unum{3,5}(6.0 ex)
+res:Unum{3,5}(24.0 ex)
+====================
+operation +
+lhs:Unum{3,5}(15.0 ex)
+rhs:Unum{3,5}(24.0 ex)
+res:Unum{3,5}(39.0 ex)
+====================
+operation /
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(3.0 ex)
+res:Unum{3,5}(0.3333333333139308 op → 0.33333333337213844 op)
+====================
+operation *
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(0.3333333333139308 op → 0.33333333337213844 op)
+res:Unum{3,5}(0.3333333333139308 op → 0.33333333337213844 op)
+====================
+operation *
+lhs:Unum{3,5}(0.3333333333139308 op → 0.33333333337213844 op)
+rhs:Unum{3,5}(4.0 ex)
+res:Unum{3,5}(1.3333333332557231 op → 1.3333333334885538 op)
+====================
+operation -
+lhs:Unum{3,5}(2.0 ex)
+rhs:Unum{3,5}(1.3333333332557231 op → 1.3333333334885538 op)
+res:Unum{3,5}(0.6666666666278616 op → 0.6666666667442769 op)
+====================
+operation /
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(0.6666666666278616 op → 0.6666666667442769 op)
+res:Ubound{3,5}(1.4999999997671694 op → 1.5000000002328306 op)
+====================
+operation /
+lhs:Unum{3,5}(1.0 ex)
+rhs:Unum{3,5}(1.0 ex)
+res:Unum{3,5}(1.0 ex)
+====================
+operation *
+lhs:Unum{3,5}(0.3333333333139308 op → 0.33333333337213844 op)
+rhs:Unum{3,5}(39.0 ex)
+res:Unum{3,5}(12.999999998137355 op → 13.0 op)
+====================
+operation -
+lhs:Unum{3,5}(17.0 ex)
+rhs:Unum{3,5}(12.999999998137355 op → 13.0 op)
+res:Unum{3,5}(4.000000000931323 op → 4.000000001862645 op)
+====================
+operation /
+lhs:Unum{3,5}(4.000000000931323 op → 4.000000001862645 op)
+rhs:Unum{3,5}(0.6666666666278616 op → 0.6666666667442769 op)
+res:Unum{3,5}(6.0 op → 6.00000000372529 op)
+====================
+operation *
+lhs:Unum{3,5}(4.0 ex)
+rhs:Unum{3,5}(6.0 op → 6.00000000372529 op)
+res:Unum{3,5}(24.0 op → 24.00000001490116 op)
+====================
+operation -
+lhs:Unum{3,5}(39.0 ex)
+rhs:Unum{3,5}(24.0 op → 24.00000001490116 op)
+res:Unum{3,5}(14.99999999254942 op → 14.999999994412065 op)
+====================
+operation /
+lhs:Unum{3,5}(14.99999999254942 op → 14.999999994412065 op)
+rhs:Unum{3,5}(3.0 ex)
+res:Unum{3,5}(4.999999997206032 op → 4.999999998137355 op)

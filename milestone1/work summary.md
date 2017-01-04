@@ -15,4 +15,15 @@ problem.
 unumjl library commits:
 ad07e8712a038fde3a31cc41d4414f1ea9595413 -> 239b4da1d14bc05b6347c24edd9fa0ba61c00300
 
+* repaired problems with matrix inversion.
+
+involved reverting multiplication and subtraction to "pre-heuristic" methods.
+will revisit using heuristic methods later.
+
+unumjl library commits:
+
+239b4da1d14bc05b6347c24edd9fa0ba61c00300 -> 0449d871839920c2b8238a7e2277cf7208129400
+
 * work on the ubox method
+
+updated the ubox method so that it now works with the boxed "Utype" values
