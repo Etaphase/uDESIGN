@@ -24,6 +24,10 @@ unumjl library commits:
 
 239b4da1d14bc05b6347c24edd9fa0ba61c00300 -> 0449d871839920c2b8238a7e2277cf7208129400
 
+further problems with basic unum operations discovered and repaired.
+
+0449d871839920c2b8238a7e2277cf7208129400 -> -> e771eff146a283df130f738c1393521b13e42668
+
 * work on the ubox method
 
-updated the ubox method so that it now works with the boxed "Utype" values
+update the ubox method so that it now works with the boxed "Utype" values
