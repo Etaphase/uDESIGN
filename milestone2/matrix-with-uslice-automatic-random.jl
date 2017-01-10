@@ -1,11 +1,14 @@
-
+srand(10)
 using Unums
 
 dim = parse(ARGS[1])
 
 U = Utype{3,5}
-M = map(U, rand(-1023:1023, dim, dim))
-v = map(U, rand(-1023:1023, dim))
+MF = map(Float64, rand(-1023:1023, dim, dim))
+vF = map(Float64, rand(-1023:1023, dim))
+rF = MF * vF
+M = map(U, MF)
+v = map(U, vF)
 r = M * v
 u0 = M \ r
 
@@ -94,20 +97,26 @@ function uslice_optimize(f::Function, ulist, dimension)
 end
 
 println("================")
-println("value zero")
+println("wide solution")
 describe.(u0);
 
-uΩ1 = uslice_optimize(examine_ulist, u0, 1)
-println("================")
-println("value omega-one")
-uΩ1 = union(uΩ1)
-describe.(uΩ1);
+current_ulist = u0
 
-uΩ2 = uslice_optimize(examine_ulist, uΩ1, 2)
-println("================")
-println("value omega-two")
-uΩ2 = union(uΩ2)
-describe.(uΩ2);
+for idx = 1:dim
+  println("reoptimizing dimension: $idx...")
+  current_ulist = union(uslice_optimize(examine_ulist, current_ulist, idx))
+end
+
+println("refined solution")
+describe.(current_ulist);
 
 println("expected solution")
 describe.(v);
+
+for idx = 1:dim
+  (v[idx] ≊ current_ulist[idx]) || println("error in value $idx")
+end
+
+println("IEEE solution")
+solF = MF \ rF
+println.(solF)

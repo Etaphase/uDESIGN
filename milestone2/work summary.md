@@ -53,3 +53,9 @@ sometimes throws an error
 julia matrix-with-uslice-automatic-random.jl 4
 
 almost always throws an error.  Went ahead and added debug checks.
+uncovered parity errors in multilpication and division bound solving.
+
+* debugging for higher order matrices.
+
+problems uncovered in executing matrices size > 25.  Some random matrices of small
+size < 3 or so will 'miss' the target area.  Need to investigate why.
