@@ -59,3 +59,31 @@ uncovered parity errors in multilpication and division bound solving.
 
 problems uncovered in executing matrices size > 25.  Some random matrices of small
 size < 3 or so will 'miss' the target area.  Need to investigate why.
+
+executing matrices size > 25 has been resolved.
+
+* discovered potential addition error.
+
+addition of ubounds can sometimes have a single bit difference (see test case
+labeled 11 September 2015).  Leaving on the "to examine" list given that the
+uslice is having some problems converging on the exact answer.
+
+* extremely long execute times for some larger matrices.
+
+srand(10) -> results in a very long execution time for dimension 3 in a 25
+dimensional matrix.  Need to examine why.
+
+"matrix-with-uslice-automatic-random-debug-expansion.jl"
+
+rapid expansion of execution values occurs between rounds 20->30.
+
+* evaluation of matrix values misses for small values.
+
+"matrix-with-uslice-automatic-random-debug-misses.jl"
+
+srand(10) -> results in missing the target on round 22 of optimization.
+
+presumed the lub() method fails due to some sort of symmetry breaking.  Switching
+to lub(B) - glb(B) to get the full 'width' of the uncertainty does a much better
+job.  However, at finer resolutions, there still is some problem with calculation,
+which will probably need an "increase in fsize resolution" to adequately address.

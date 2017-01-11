@@ -1,7 +1,7 @@
 srand(10)
 using Unums
 
-dim = parse(ARGS[1])
+dim = 2
 
 U = Utype{3,5}
 MF = map(Float64, rand(-1023:1023, dim, dim))
@@ -17,7 +17,7 @@ function cumdist2(table, v)
   for jdx = 1:size(table,2)
    sumdist = Utype(zero(Unum{3,5}))
    for idx = 1:size(table,1)
-     sumdist += Unums.lub(Unums.abs(table[idx,jdx] - v[idx]))
+     sumdist += Unums.lub(table[idx,jdx]) - Unums.glb(table[idx,jdx])
    end
    res[jdx] = sumdist
   end
@@ -47,12 +47,31 @@ function union{U <: Utype}(ulist::Matrix{U})
   uresult
 end
 
+do_describe = false
 
 #examine ulist is a function which takes a ulist and returns a range of indices
 #to keep.
 examine_ulist = (ulist) -> begin
   #first, generate the cumulative distance record.
   distance_record = Unums.glb.(cumdist2(M * ulist, r))
+
+  if (do_describe)
+    println("xxxxxx")
+
+    println("matrix:")
+    describe.(M)
+
+    println("r:")
+    describe.(r)
+
+    println("ulist:")
+    println(ulist[1,1])
+    describe.(ulist)
+
+    println("distance record:")
+    describe.(distance_record);
+  end
+
   low_range = 1
   high_range = length(distance_record)
   #start from the front end of the list.
@@ -88,19 +107,26 @@ function uslice_optimize(f::Function, ulist, dimension)
   ulist = uslice(ulist, dimension)
   ulist = uslice(ulist, dimension)
 
+  round = 1;
+
   while !isterminal(ulist, dimension)
     keepers = f(ulist)
     ulist = slicedim(ulist, 2, keepers)
     ulist = uslice(ulist, dimension)
 
-    if (dimension == 3)
-      global times
-      if times > 20
-        println("========")
-        describe.(ulist[3,:])
-      end
-      times > 30 && exit()
-      times += 1
+    if (dimension == 1)
+
+      global do_describe
+      do_describe = (round > 16)
+
+      println("---------")
+      println("ulist entries, round $round:")
+      describe.(ulist[1,:]);
+      println("keepers:")
+      println(keepers)
+      round += 1
+
+      round > 18 && exit()
     end
   end
 
