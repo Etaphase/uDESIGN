@@ -87,3 +87,11 @@ presumed the lub() method fails due to some sort of symmetry breaking.  Switchin
 to lub(B) - glb(B) to get the full 'width' of the uncertainty does a much better
 job.  However, at finer resolutions, there still is some problem with calculation,
 which will probably need an "increase in fsize resolution" to adequately address.
+
+* promoting to a next FSS
+
+definitely is a correct strategy as it increases the resolution on the process,
+however, is not necessarily correct in that it doesn't seem to address a bigger
+problem of error distances converging onto the intersect point.  It's possible
+that there is some sort of multiplication or division error going on here that
+needs to be repaired.
