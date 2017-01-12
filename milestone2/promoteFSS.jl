@@ -6,7 +6,7 @@ function promoteFSS{ESS,FSS}(v::Utype{ESS,FSS})
   if isa(v.val, Unum)
     T(U(v.val))
   else
-    T(Ubound(U(v.lower), U(v.upper)))
+    T(Ubound(U(v.val.lower), U(v.val.upper)))
   end
 end
 

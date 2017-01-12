@@ -1,6 +1,8 @@
 srand(10)
 using Unums
 
+include("promoteFSS.jl")
+
 dim = 2
 
 U = Utype{3,5}
@@ -13,11 +15,12 @@ r = M * v
 u0 = M \ r
 
 function cumdist2(table, v)
-  res = Vector{Utype}(size(table,2))
+  U = typeof(v).parameters[1]
+  res = Vector{U}(size(table,2))
   for jdx = 1:size(table,2)
-   sumdist = Utype(zero(Unum{3,5}))
+   sumdist = zero(U)
    for idx = 1:size(table,1)
-     sumdist += Unums.lub(table[idx,jdx]) - Unums.glb(table[idx,jdx])
+     sumdist += Unums.lub(abs(table[idx,jdx] - v[idx]))
    end
    res[jdx] = sumdist
   end
@@ -55,6 +58,16 @@ examine_ulist = (ulist) -> begin
   #first, generate the cumulative distance record.
   distance_record = Unums.glb.(cumdist2(M * ulist, r))
 
+  #check if we need to elevate FSS to a higher value.
+
+  if (distance_record[1] == distance_record[2])
+    println("need to expand FSS")
+    promotedM = promoteFSS.(M)
+    promotedu = promoteFSS.(ulist)
+    promotedr = promoteFSS.(r)
+    distance_record = Unums.glb.(cumdist2(promotedM * promotedu, promotedr))
+  end
+
   if (do_describe)
     println("xxxxxx")
 
@@ -75,7 +88,7 @@ examine_ulist = (ulist) -> begin
   low_range = 1
   high_range = length(distance_record)
   #start from the front end of the list.
-  for idx = 1:(length(distance_record) - 2)
+  for idx = 1:(length(distance_record) - 1)
     if distance_record[idx] >= distance_record[idx + 1]
       low_range = idx + 1
     else
@@ -83,21 +96,24 @@ examine_ulist = (ulist) -> begin
     end
   end
 
-  for idx = length(distance_record): -1 : 3
+  for idx = length(distance_record): -1 : 2
     if distance_record[idx] >= distance_record[idx - 1]
       high_range = idx - 1
     else
       break
     end
   end
+
   #return the keeplist
   if low_range > high_range
-    return high_range : low_range
+    keeplist = high_range - 1:low_range + 1
   elseif low_range == high_range
-    return low_range - 1:high_range + 1
+    keeplist = low_range - 1:high_range + 1
   else
-    return (low_range:high_range)
+    keeplist = low_range - 1:high_range + 1
   end
+
+  return keeplist
 end
 
 times = 0
@@ -114,19 +130,19 @@ function uslice_optimize(f::Function, ulist, dimension)
     ulist = slicedim(ulist, 2, keepers)
     ulist = uslice(ulist, dimension)
 
-    if (dimension == 1)
+    if (dimension == 2)
 
       global do_describe
-      do_describe = (round > 16)
+      do_describe = round > 20
 
       println("---------")
       println("ulist entries, round $round:")
-      describe.(ulist[1,:]);
+      describe.(ulist[2,:]);
       println("keepers:")
       println(keepers)
       round += 1
 
-      round > 18 && exit()
+      round > 25 && exit()
     end
   end
 
@@ -137,6 +153,7 @@ end
 println("================")
 println("wide solution")
 describe.(u0);
+println(u0)
 
 current_ulist = u0
 
