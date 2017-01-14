@@ -18,11 +18,17 @@ function cumdist2(table, v)
   U = typeof(v).parameters[1]
   res = Vector{U}(size(table,2))
   for jdx = 1:size(table,2)
-   sumdist = zero(U)
+
+   totdist = zero(U)
+
    for idx = 1:size(table,1)
-     sumdist += Unums.lub(abs(table[idx,jdx] - v[idx]))
+     lubdist = abs(Unums.lub(table[idx,jdx] - v[idx]))
+     glbdist = abs(Unums.glb(table[idx,jdx] - v[idx]))
+
+     totdist += lubdist > glbdist ? lubdist : glbdist
    end
-   res[jdx] = sumdist
+
+   res[jdx] = totdist
   end
   res
 end
@@ -78,8 +84,10 @@ examine_ulist = (ulist) -> begin
     describe.(r)
 
     println("ulist:")
+    println("first coordinate")
     println(ulist[1,1])
-    describe.(ulist)
+    println("second coordinates")
+    println.(ulist[2,:])
 
     println("distance record:")
     describe.(distance_record);
@@ -126,24 +134,27 @@ function uslice_optimize(f::Function, ulist, dimension)
   round = 1;
 
   while !isterminal(ulist, dimension)
+
+    global do_describe
+    do_describe = round == 24
+
     keepers = f(ulist)
-    ulist = slicedim(ulist, 2, keepers)
-    ulist = uslice(ulist, dimension)
 
-    if (dimension == 2)
-
-      global do_describe
-      do_describe = round > 20
+    if (dimension == 2) && (round == 24)
 
       println("---------")
       println("ulist entries, round $round:")
       describe.(ulist[2,:]);
       println("keepers:")
       println(keepers)
-      round += 1
 
       round > 25 && exit()
     end
+
+    ulist = slicedim(ulist, 2, keepers)
+    ulist = uslice(ulist, dimension)
+
+    round += 1
   end
 
   #be careful with the last one.
