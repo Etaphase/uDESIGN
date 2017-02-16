@@ -1,0 +1,82 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{hhline}
+
+
+\title{A Small Theorem on the Interval Approach Criterion for Systems of Linear Equations.}
+\author{Isaac T Yonemoto}
+
+\begin{document}
+
+\maketitle
+
+\section{Motivation}
+
+The development of Unums encourages reformulation of computational mathematics to approach
+numerical problems, keeping in mind traditional performance metrics, such as speed and energy
+consumption, while still yielding mathematically accurate solutions.  Traditional numerical
+systems, such as IEEE floating points, abandon accuracy for performance.  Symbolic systems
+incur high calculation costs and still may encounter situations without closed form solutions.
+Interval arithmetic can have exploding uncertainty under certain operations without clear
+guidance on how to resolve this.  Unums, however, provide a natural solution to the exploding
+uncertainty, by way of methods such as the Ubox method.
+
+For solving systems of linear equations, the naive solution is to first perform a gauss-jordan
+elimination and then whittle down the solution set using Uboxes.  This is inefficient and cannot
+distinguish between a unit cell that contains a solution and a unit cell that merely happens to
+be at the intersection of all of the hyperplanes.  Moreover, the search time proceeds with time
+O(something large)
+
+\section{The Interval Approach (uSlice) method}
+
+To address this issue, I developed a strategy called the interval approach method.  The procedure
+is as follows:  Select a dimension.  Partition a superset of the solved interval in this dimension 
+with equal width (simplest to choose a power of two), called ``uslices''.  Apply the uslices as
+values to the system of linear equations and measure the maximum error from the constant vector of the
+linear equations.  Because the equations are linear, conceptually the ``outside'' slices should 
+have greater error than the ``inside'' slices, with a few exceptions that are otherwise easily 
+solved (e.g. an irrelevant dimension that trivially reduces to a smaller system of linear equations).
+
+In practice, however, this interval approach method fails in the event that a bounding interval
+is \emph{asymmetric} about the solution.  This document describes the derivation of an ``Interval
+Approach Criterion'' which guarantees that the uslices with lowest error bound the solution in
+the exact case and must contain the solution in the inexact case.
+
+\section{Derivation of the Interval Approach Criterion: 2-dimensions, positive matrix, exact solution}
+
+Given a matrix $ M = \left( \begin{array}{cc} A & B \\ C & D \end{array} \right)$ with constant
+vector $v = \left( \begin{array}{c} v_1 \\ v_2 \end{array} \right)$ or written as            
+$\left( \begin{array}{cc|c} A & B & v_1 \\ C & D & v_2 \end{array} \right)$.  The solution
+$s = \left( \begin{array}{c} x \\ y \end{array} \right)$ and without loss of generality 
+over variable order y is bounded by an asymmetric open interval $y \in (y - \delta_l, y + \delta_h)$,
+and we examine the following intervals for x: $v_{far} = (x - 2\epsilon, x - \epsilon)$ and 
+$v_{near} = (x - \epsilon, x)$
+
+The first equation evaluates as follows:
+
+$(M \cdot v_{far})_1 = A(x - 2\epsilon, x - \epsilon) + B(y - \delta_l, y + \delta_h)$
+
+And:
+
+$(M \cdot v_{near})_1 = A(x - \epsilon, x) + B(y - \delta_l, y + \delta_h)$
+
+Subtracting $v_1 = Ax + By$ from these intervals results in the following error intervals:
+
+$(-2\epsilon A - B\delta_l, -\epsilon A + B\delta_h)$
+
+And:
+
+$(-\epsilon A - B\delta_l, B\delta_h)$
+
+
+Since the outer values of the intervals are necessarily extrema, the ``maximal'' error for these
+uSlices is attained at the absolute value.  The assertion of interval approach is thus satisfied 
+when $max(2\epsilon A + B\delta_l, |-\epsilon A + B\delta_h|) > max(\epsilon A + B\delta_l, B\delta_h)$.
+Since always $\epsilon A + B\delta_l < 2\epsilon A + B\delta_l$, this value is not in contention.
+We must only check that $B\delta_h$ is not greater than either critical value.  By simple rearrangement,
+\[\epsilon > \frac{(B\delta_h - B\delta_l)}{2A}\] satisfies this condition.
+
+
+\end{document}

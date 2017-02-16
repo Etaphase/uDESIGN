@@ -36,7 +36,13 @@ checkval2 = U(-244) * U(Unum{3,6}(0x0000000000000003, 0x3FFFFFC000000000, 0x0003
 describe(checkval2)
 
 println("====")
+
+println(checkval1)
+println(checkval2)
 #sum.
 sumval = checkval1 + checkval2
 
 describe(sumval)
+println("===== checking incorrect multiplication")
+describe(v3[2])
+describe(v3[2] * U(-244))
