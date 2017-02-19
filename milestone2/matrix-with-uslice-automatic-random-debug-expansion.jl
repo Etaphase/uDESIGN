@@ -126,7 +126,7 @@ println("expected solution")
 describe.(v);
 
 for idx = 1:dim
-  (v[idx] ≊ current_ulist[idx]) || println("error in value $idx")
+  (v[idx] ≹ current_ulist[idx]) || println("error in value $idx")
 end
 
 println("IEEE solution")

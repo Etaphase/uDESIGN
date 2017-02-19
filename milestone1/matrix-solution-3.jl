@@ -15,6 +15,6 @@ ru = map(U, r);
 
 usolv = MU \ ru;
 
-check = (v) -> prod(map(≊, MU * v, ru));
+check = (v) -> prod(map(≹, MU * v, ru));
 @time res2 = ufilter(check, usolv)
 #describe.(res2);

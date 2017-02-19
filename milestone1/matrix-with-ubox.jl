@@ -13,6 +13,6 @@ r = M * v;
 res = M \ r;
 describe.(res);
 
-check = (v) -> prod(map(≊, M * v, r));
+check = (v) -> prod(map(≹, M * v, r));
 res2 = ufilter(check, res);
 describe.(res2);
