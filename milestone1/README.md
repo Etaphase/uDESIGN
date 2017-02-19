@@ -36,12 +36,12 @@ EG:
 *  x^2 - 2 =>  '''
 -1.4142135623842478 op → -1.4142135621514171 op
 1.4142135621514171 op → 1.4142135623842478 op'''
-*  x^5 - 4x^4 + 8x^2 + x - 2 => Five sets of answers that cluster near -1, -.675...,
-0.46..., 2.0, 3.214...  Note that as a quintic, this formula has no closed form
-algebraic solution.
-*  1/(x^2 - 3x) + 5  => Four sets of answers that cluster around 0, 0.68...
-2.93..., 3.0; 0 and 3.0 are output because the asymptotic values cross over at
-these points.
+*  x^5 - 4x^4 + 8x^2 + x - 2 (search over -100, 100) => Five sets of answers
+that cluster near -1, -.675..., 0.46..., 2.0, 3.214...  Note that as a quintic,
+this formula has no closed form algebraic solution.
+*  1/(x^2 - 3x) + 5  (search over -100, 100) => Four sets of answers that
+cluster around 0, 0.68... 2.93..., 3.0; 0 and 3.0 are output because the
+asymptotic values cross over at these points.
 
 
 ## Other
