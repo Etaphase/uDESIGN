@@ -33,9 +33,9 @@ and bounds.  Some functions won't be able to be solved over the entire real
 number line.
 
 EG:
-*  x^2 - 2 =>  '''
--1.4142135623842478 op → -1.4142135621514171 op
-1.4142135621514171 op → 1.4142135623842478 op'''
+*  x^2 - 2 => -1.4142135623842478 op → -1.4142135621514171 op
+1.4142135621514171 op → 1.4142135623842478 op.  These two open sets correspond
+to the positive and negative square roots of two.
 *  x^5 - 4x^4 + 8x^2 + x - 2 (search over -100, 100) => Five sets of answers
 that cluster near -1, -.675..., 0.46..., 2.0, 3.214...  Note that as a quintic,
 this formula has no closed form algebraic solution.

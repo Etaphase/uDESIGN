@@ -3,6 +3,8 @@
 \usepackage{fullpage}
 \usepackage{graphicx}
 \usepackage{hhline}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 
 
 \title{A Small Theorem on the Interval Approach Criterion for Systems of Linear Equations.}
@@ -39,45 +41,88 @@ linear equations.  Because the equations are linear, conceptually the ``outside'
 have greater error than the ``inside'' slices, with a few exceptions that are otherwise easily 
 solved (e.g. an irrelevant dimension that trivially reduces to a smaller system of linear equations).
 
-In practice, however, this interval approach method fails in the event that a bounding interval
-is \emph{asymmetric} about the solution.  This document describes the derivation of an ``Interval
-Approach Criterion'' which guarantees that the uslices with lowest error bound the solution in
-the exact case and must contain the solution in the inexact case.
+\section{Statement of the interval approach criterion}
 
-\section{Derivation of the Interval Approach Criterion: 2-dimensions, positive matrix, exact solution}
+First, some definitions:
 
-Given a matrix $ M = \left( \begin{array}{cc} A & B \\ C & D \end{array} \right)$ with constant
-vector $v = \left( \begin{array}{c} v_1 \\ v_2 \end{array} \right)$ or written as            
-$\left( \begin{array}{cc|c} A & B & v_1 \\ C & D & v_2 \end{array} \right)$.  The solution
-$s = \left( \begin{array}{c} x \\ y \end{array} \right)$ and without loss of generality 
-over variable order y is bounded by an asymmetric open interval $y \in (y - \delta_l, y + \delta_h)$,
-and we examine the following intervals for x: $v_{far} = (x - 2\epsilon, x - \epsilon)$ and 
-$v_{near} = (x - \epsilon, x)$
+Let $M$ be a matrix in $\mathbb{R}^{n\times n}$, and $\vec{v}, \vec{r} \in \mathbb{R}^n | M\vec{v} = \vec{r}$.
 
-The first equation evaluates as follows:
+Let $\varPi$ be a closed box (n-orthotrope) in $\mathbb{R}^n$, with an equal tripartition of closed boxes across 
+one dimension $\varPi = \bigcup\varPi_1 \varPi_2 \varPi_3$.
+WOLOG, let the partitioning dimension be 1, so: 
 
-$(M \cdot v_{far})_1 = A(x - 2\epsilon, x - \epsilon) + B(y - \delta_l, y + \delta_h)$
+\[ \vec{v} \in \varPi_1 = \left( \begin{array}{c}
+\big[x_1, x_1 + \Delta x_1\big]  \\ \\
+\big[x_2, x_2 + \Delta x_2\big]  \\ \\
+\big[x_3, x_3 + \Delta x_3\big]  \end{array} \right); \varPi_2 = \left( \begin{array}{c}
+\big[x_1 + \Delta x_1,  x_1 + 2\Delta x_1\big]  \\ \\
+\big[x_2, x_2 + \Delta x_2\big]  \\ \\
+\big[x_3, x_3 + \Delta x_3\big]  \end{array} \right); \varPi_3 = \left( \begin{array}{c}
+\big[x_1 + 2\Delta x_1,  x_1 + 3\Delta x_1\big]  \\ \\
+\big[x_2, x_2 + \Delta x_2\big]  \\ \\
+\big[x_3, x_3 + \Delta x_3\big]  \end{array} \right);\] 
 
-And:
+Define an ``heuristic function'' $d_{\alpha, \vec{r}} : \mathbb{R}^n \rightarrow \mathbb{R}^n$ for each dimension $\alpha$, where
+$d_{\alpha, \vec{r}}(\vec{x}) = |(M\vec{x})_\alpha - r_\alpha|$.  This is effectively the dot product between the vector $\vec{x}$ and
+the $\alpha$'th row of the matrix, or, crudely, `the error, across the partition, when attempting to solve the $\alpha$'th linear equation'.
 
-$(M \cdot v_{near})_1 = A(x - \epsilon, x) + B(y - \delta_l, y + \delta_h)$
+We would like a criterion that guarantees that the characteristic shape of applying the heuristic function to each of these
+intervals results in a diagnostic that can iteratively refine the partition $\varPi$.  The interval approach theorem shows
+that the following condition:
 
-Subtracting $v_1 = Ax + By$ from these intervals results in the following error intervals:
+\[ \Delta x_1 > \frac{\sum\limits_{i=2}^{n} |m_{\alpha,i}|\Delta x_i}{|m_{\alpha,1}|} \]
 
-$(-2\epsilon A - B\delta_l, -\epsilon A + B\delta_h)$
+guarantees that $max(d_{\alpha, \vec{r}}(M\cdot\varPi_1)) < max(d_{\alpha, \vec{r}}(M\cdot\varPi_3))$.  As a result, any equal \emph{4-partition} of a closed
+box that has $max(d_{\alpha, \vec{r}}(M\cdot\varPi_1)) > max(d_{\alpha, \vec{r}}(M\cdot\varPi_2))$ and $max(d_{\alpha, \vec{r}}(M\cdot\varPi_3)) < max(d_{\alpha, \vec{r}}(M\cdot\varPi_4))$
+has a guarantee that $\vec{r}$ is in either $\varPi_2$ or $\varPi_3$, which iteratively reduces the bounds on the solution.
 
-And:
+\section{Proof, n = 2}
 
-$(-\epsilon A - B\delta_l, B\delta_h)$
+\subsection{case $m_{\alpha,:} > 0$}
 
+\setlength{\unitlength}{0.8cm}
+\begin{picture}(6,4)
+\thicklines
+\put(1,1){\line(3,0){3}}
+\put(1,3){\line(3,0){3}}
+\put(1,1){\line(0,1){2}}
+\put(2,1){\line(0,1){2}}
+\put(3,1){\line(0,1){2}}
+\put(4,1){\line(0,1){2}}
+\put(1.1,1.1){$\vec{v}$}
+\put(1,1){\circle*{0.15}}
+\put(2,3){\circle*{0.15}}
+\put(4,3){\circle*{0.15}}
+\put(1.5,1.3){\circle*{0.1}}
+\put(1.2,1.8){$\varPi_1$}
+\put(2.2,1.8){$\varPi_2$}
+\put(3.2,1.8){$\varPi_3$}
+\put(0.6,0.6){$A$}
+\put(1.8,3.2){$B$}
+\put(3.9,3.2){$C$}
+\end{picture}
 
-Since the outer values of the intervals are necessarily extrema, the ``maximal'' error for these
-uSlices is attained at the absolute value.  The assertion of interval approach is thus satisfied 
-when $max(2\epsilon A + B\delta_l, |-\epsilon A + B\delta_h|) > max(\epsilon A + B\delta_l, B\delta_h)$.
-Since always $\epsilon A + B\delta_l < 2\epsilon A + B\delta_l$, this value is not in contention.
-We must only check that $B\delta_h$ is not greater than either critical value.
+\paragraph{Lemma: $max(d_{\alpha,\vec{r}}(\varPi_1))$ must be $d_{\alpha,\vec{r}}(\vec{A})$ or $d_{\alpha,\vec{r}}(\vec{B})$.}
+WOLOG, let's take $\alpha = 1$ and label the row $(a\ b) \equiv (m_{1,1}\ m_{1,2})$.  For simplicity, we will identify $d = d_{\alpha,\vec{r}}$
 
-\[\epsilon > \frac{(B\delta_h - B\delta_l)}{2A}\] satisfies this condition when $2\epsilon A + B\delta_l > |-\epsilon A + B\delta_h|$
+Examine all points $\vec{x}$ where $v_1 < x_1 < B_1$, and $v_2 < x_2 < B_2$.  Crudely, this is the ``upper right sub-rectangle'' 
+created within $\varPi_1$ by $\vec{v}$.  Compare $d(\vec{x})$ and $d(\vec{B})$.  
 
+$d(\vec{x}) \equiv |(M\vec{x} - \vec{r})_1| = |(M(\vec{v} + \delta\vec{x}) - M\vec{v})_1|$ for some positive vector $\delta\vec{x}$.  By linearity, this
+$d(\vec{x}) = |(M\delta\vec{x})_1| = a(\delta{x})_1 + b(\delta{x})_2$
+
+$d(\vec{A}) \equiv |(M\vec{A} - \vec{r})_1| = |(M(\vec{v} + \delta\vec{x} + \delta'\vec{x}) - M\vec{v})_1|$ for some positive or zero vector $\delta'\vec{x}$.  By linearity, this
+$d(\vec{A}) = |(M\delta\vec{x} + M\delta'\vec{x})_1| = a(\delta{x})_1 + b(\delta{x})_2 + a(\delta'{x})_1 + b(\delta'{x})_2$.  Since $\delta'\vec{x}$
+is positive, $d(\vec{A}) \geq d(\vec{x})$ for all x in this upper right sub-rectangle, and so point B yields a maximum over this region.
+
+Examine all points $\vec{x}$ where $A_1 < x_1 < v_1$, and $A_2 < x_2 < v_2$.  Crudely, this is the ``lower left sub-rectangle'' 
+created within $\varPi_1$ by $\vec{v}$.  Compare $d(\vec{x})$ and $d(\vec{A})$.
+
+$d(\vec{x}) \equiv |(M\vec{x} - \vec{r})_1| = |(M(\vec{v} - \delta\vec{x}) - M\vec{v})_1|$ for some positive vector $\delta\vec{x}$.  By linearity, this
+$d(\vec{x}) = |- (M\delta\vec{x})_1| = |- a(\delta{x})_1 - b(\delta{x})_2| = a(\delta{x})_1 + b(\delta{x})_2$ 
+
+$d(\vec{A}) \equiv |(M\vec{A} - \vec{r})_1| = |(M(\vec{v} - \delta\vec{x} - \delta'\vec{x}) - M\vec{v})_1|$ for some positive or zero vector $\delta'\vec{x}$.  By linearity, this
+$d(\vec{A}) = |-(M\delta\vec{x} - M\delta'\vec{x})_1| = |-a(\delta{x})_1 - b(\delta{x})_2 - a(\delta'{x})_1 - b(\delta'{x})_2| a(\delta{x})_1 + b(\delta{x})_2 + a(\delta'{x})_1 + b(\delta'{x})_2$.  Since $\delta'\vec{x}$
+is positive, $d(\vec{A}) \geq d(\vec{x})$ for all x in this lower left sub-rectangle, and so point B yields a maximum over this region.
 
 \end{document}
