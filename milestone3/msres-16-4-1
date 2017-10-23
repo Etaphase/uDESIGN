@@ -1,0 +1,278 @@
+------------------------------
+starting box volume: 1.0464532582324219e9
+starting box count: 18446650114830239941
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x8fbf) → ULP{16,2}(0x6a41), ULP{16,2}(0x6763) → ULP{16,2}(0x6ff9), ULP{16,2}(0x6303) → ULP{16,2}(0x6bb3), ULP{16,2}(0x91e7) → ULP{16,2}(0x99b7)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x9559) → ULP{16,2}(0x9b17), ULP{16,2}(0x6847) → ULP{16,2}(0x6db7), ULP{16,2}(0x6431) → ULP{16,2}(0x695f), ULP{16,2}(0x9373) → ULP{16,2}(0x98ff)]
+final box volume: 3.598839487792969e7
+final box count: 3863925906701
+96.56091711743359 % improvement in bounding box.
+------------------------------
+starting box volume: 6.152288278826745e-6
+starting box count: 586268817
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3f45) → ULP{16,2}(0x40d5), ULP{16,2}(0xbe7b) → ULP{16,2}(0xbee7), ULP{16,2}(0xce3d) → ULP{16,2}(0xcf43), ULP{16,2}(0x40ad) → ULP{16,2}(0x40df)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x4031) → ULP{16,2}(0x4045), ULP{16,2}(0xbe9f) → ULP{16,2}(0xbec1), ULP{16,2}(0xce8f) → ULP{16,2}(0xcf0d), ULP{16,2}(0x40b7) → ULP{16,2}(0x40d1)]
+final box volume: 3.16572368319612e-8
+final box count: 2520315
+99.48543963811139 % improvement in bounding box.
+  6.807767 seconds (69.72 M allocations: 1.552 GiB, 2.72% gc time)
+------------------------------
+starting box volume: 1.1053962225560099e-5
+starting box count: 18446744035236632659
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xe2cf) → ULP{16,2}(0x22f7), ULP{16,2}(0xb6f1) → ULP{16,2}(0xb7b1), ULP{16,2}(0x3a8b) → ULP{16,2}(0x3ab3), ULP{16,2}(0x407d) → ULP{16,2}(0x40df)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x1863) → ULP{16,2}(0x1aed), ULP{16,2}(0xb735) → ULP{16,2}(0xb775), ULP{16,2}(0x3a97) → ULP{16,2}(0x3aa7), ULP{16,2}(0x408f) → ULP{16,2}(0x40c3)]
+final box volume: 6.148184183984995e-8
+final box count: 38125815
+99.44380267830402 % improvement in bounding box.
+ 70.050992 seconds (725.78 M allocations: 16.154 GiB, 2.69% gc time)
+------------------------------
+starting box volume: 0.6704376573907211
+starting box count: 73067048163
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x51db) → ULP{16,2}(0x56bd), ULP{16,2}(0x4e7b) → ULP{16,2}(0x50e7), ULP{16,2}(0xaeed) → ULP{16,2}(0xb02d), ULP{16,2}(0xae27) → ULP{16,2}(0xaf4b)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x53c7) → ULP{16,2}(0x54e7), ULP{16,2}(0x4f4d) → ULP{16,2}(0x5093), ULP{16,2}(0xaf03) → ULP{16,2}(0xafed), ULP{16,2}(0xae29) → ULP{16,2}(0xaf35)]
+final box volume: 0.062026217579841614
+final box count: 5974007145
+90.74839891583034 % improvement in bounding box.
+ 33.310964 seconds (341.91 M allocations: 7.610 GiB, 2.67% gc time)
+------------------------------
+starting box volume: 4.625358087650966e-6
+starting box count: 1336275225
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x331f) → ULP{16,2}(0x35c7), ULP{16,2}(0xc5a1) → ULP{16,2}(0xc639), ULP{16,2}(0x3c99) → ULP{16,2}(0x3cf7), ULP{16,2}(0x440f) → ULP{16,2}(0x4495)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3425) → ULP{16,2}(0x34bb), ULP{16,2}(0xc5b9) → ULP{16,2}(0xc61f), ULP{16,2}(0x3cb3) → ULP{16,2}(0x3ce7), ULP{16,2}(0x4425) → ULP{16,2}(0x447f)]
+final box volume: 2.5438851025683107e-7
+final box count: 75012119
+94.5001337099497 % improvement in bounding box.
+ 19.054464 seconds (197.37 M allocations: 4.393 GiB, 2.73% gc time)
+------------------------------
+starting box volume: 6.57412988402939e-5
+starting box count: 27985338459
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbe55) → ULP{16,2}(0xbf83), ULP{16,2}(0xd511) → ULP{16,2}(0xdd8b), ULP{16,2}(0xc94b) → ULP{16,2}(0xcb33), ULP{16,2}(0x4daf) → ULP{16,2}(0x4e05)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbec9) → ULP{16,2}(0xbf17), ULP{16,2}(0xd75d) → ULP{16,2}(0xd8b5), ULP{16,2}(0xc9db) → ULP{16,2}(0xcaad), ULP{16,2}(0x4dc1) → ULP{16,2}(0x4df1)]
+final box volume: 7.067012575134868e-7
+final box count: 281789445
+98.92502693135059 % improvement in bounding box.
+265.756817 seconds (2.75 G allocations: 61.149 GiB, 2.71% gc time)
+------------------------------
+starting box volume: 5.451205652207136e-5
+starting box count: 124809615
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbf45) → ULP{16,2}(0xbfe5), ULP{16,2}(0xb615) → ULP{16,2}(0xb687), ULP{16,2}(0x4ba5) → ULP{16,2}(0x4c0f), ULP{16,2}(0x48c7) → ULP{16,2}(0x4905)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbf87) → ULP{16,2}(0xbfb1), ULP{16,2}(0xb641) → ULP{16,2}(0xb669), ULP{16,2}(0x4bc1) → ULP{16,2}(0x4be9), ULP{16,2}(0x48d1) → ULP{16,2}(0x48f1)]
+final box volume: 9.778887033462524e-7
+final box count: 2385339
+98.20610564756383 % improvement in bounding box.
+  2.012769 seconds (20.86 M allocations: 475.577 MiB, 2.75% gc time)
+------------------------------
+starting box volume: 2.6723864721134305e-7
+starting box count: 39815663
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x41f7) → ULP{16,2}(0x4267), ULP{16,2}(0xc711) → ULP{16,2}(0xc769), ULP{16,2}(0xcd17) → ULP{16,2}(0xcd81), ULP{16,2}(0x4139) → ULP{16,2}(0x415d)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x4219) → ULP{16,2}(0x4249), ULP{16,2}(0xc725) → ULP{16,2}(0xc753), ULP{16,2}(0xcd39) → ULP{16,2}(0xcd5f), ULP{16,2}(0x4143) → ULP{16,2}(0x4153)]
+final box volume: 9.538780432194471e-9
+final box count: 1526889
+96.43061341174548 % improvement in bounding box.
+  2.926670 seconds (30.50 M allocations: 695.166 MiB, 2.65% gc time)
+------------------------------
+starting box volume: 8.971821330305829e-7
+starting box count: 8211911625
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xcdef) → ULP{16,2}(0xcfbf), ULP{16,2}(0x3c57) → ULP{16,2}(0x3cef), ULP{16,2}(0x2aa1) → ULP{16,2}(0x2d43), ULP{16,2}(0x2bc1) → ULP{16,2}(0x2c6b)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xceab) → ULP{16,2}(0xcefb), ULP{16,2}(0x3c91) → ULP{16,2}(0x3caf), ULP{16,2}(0x2b8f) → ULP{16,2}(0x2c77), ULP{16,2}(0x2be1) → ULP{16,2}(0x2c47)]
+final box volume: 6.305356237135129e-9
+final box count: 60261489
+99.2972044354209 % improvement in bounding box.
+ 33.376997 seconds (347.44 M allocations: 7.734 GiB, 2.75% gc time)
+------------------------------
+starting box volume: 0.017137767747044563
+starting box count: 1204588125
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xa6e3) → ULP{16,2}(0xa7d9), ULP{16,2}(0x5093) → ULP{16,2}(0x5191), ULP{16,2}(0xad2d) → ULP{16,2}(0xadc5), ULP{16,2}(0x4811) → ULP{16,2}(0x488d)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xa731) → ULP{16,2}(0xa79f), ULP{16,2}(0x50d1) → ULP{16,2}(0x513d), ULP{16,2}(0xad39) → ULP{16,2}(0xadc5), ULP{16,2}(0x4811) → ULP{16,2}(0x488d)]
+final box volume: 0.0030011404305696487
+final box count: 213244875
+82.48814854497488 % improvement in bounding box.
+ 35.530786 seconds (368.36 M allocations: 8.200 GiB, 2.73% gc time)
+------------------------------
+starting box volume: 5.1426468417048454e-6
+starting box count: 23997897
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x50e1) → ULP{16,2}(0x5113), ULP{16,2}(0xbe81) → ULP{16,2}(0xbebf), ULP{16,2}(0xc62b) → ULP{16,2}(0xc68b), ULP{16,2}(0xb159) → ULP{16,2}(0xb1a5)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x50e5) → ULP{16,2}(0x510d), ULP{16,2}(0xbe87) → ULP{16,2}(0xbebd), ULP{16,2}(0xc62b) → ULP{16,2}(0xc68b), ULP{16,2}(0xb159) → ULP{16,2}(0xb1a5)]
+final box volume: 3.5832636058330536e-6
+final box count: 16842595
+30.322580645161295 % improvement in bounding box.
+ 23.666082 seconds (245.24 M allocations: 5.459 GiB, 2.76% gc time)
+------------------------------
+starting box volume: 3.012375908595276e8
+starting box count: 828421523246739
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x920d) → ULP{16,2}(0x653f), ULP{16,2}(0x9ec5) → ULP{16,2}(0x6aab), ULP{16,2}(0x95cb) → ULP{16,2}(0x9f1f), ULP{16,2}(0x642f) → ULP{16,2}(0x6d09)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x944f) → ULP{16,2}(0x9da5), ULP{16,2}(0x5eaf) → ULP{16,2}(0x6877), ULP{16,2}(0x95cb) → ULP{16,2}(0x9f1f), ULP{16,2}(0x642f) → ULP{16,2}(0x6d09)]
+final box volume: 5.6288914437366486e7
+final box count: 32438067724665
+81.31411346214921 % improvement in bounding box.
+210.887409 seconds (2.17 G allocations: 48.296 GiB, 2.73% gc time)
+------------------------------
+starting box volume: 1.4928914424672257e-6
+starting box count: 6835323055
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x29e3) → ULP{16,2}(0x2cff), ULP{16,2}(0x3849) → ULP{16,2}(0x38d9), ULP{16,2}(0x3649) → ULP{16,2}(0x3763), ULP{16,2}(0xce6d) → ULP{16,2}(0xcf3d)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x2abd) → ULP{16,2}(0x2c17), ULP{16,2}(0x3877) → ULP{16,2}(0x38a3), ULP{16,2}(0x36bd) → ULP{16,2}(0x36ff), ULP{16,2}(0xce8f) → ULP{16,2}(0xcf1d)]
+final box volume: 3.168117501672896e-8
+final box count: 149607315
+97.87786478537441 % improvement in bounding box.
+ 20.801107 seconds (216.80 M allocations: 4.826 GiB, 2.78% gc time)
+------------------------------
+starting box volume: 1.8119644664693624e-6
+starting box count: 67715487
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3c0b) → ULP{16,2}(0x3cb7), ULP{16,2}(0x3c11) → ULP{16,2}(0x3c7d), ULP{16,2}(0xafb3) → ULP{16,2}(0xafcd), ULP{16,2}(0x3e97) → ULP{16,2}(0x3f1b)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3c4d) → ULP{16,2}(0x3c7b), ULP{16,2}(0x3c15) → ULP{16,2}(0x3c79), ULP{16,2}(0xafb7) → ULP{16,2}(0xafc9), ULP{16,2}(0x3eb5) → ULP{16,2}(0x3efd)]
+final box volume: 1.6943886294029653e-7
+final box count: 6584089
+90.64888599772321 % improvement in bounding box.
+  8.104412 seconds (84.23 M allocations: 1.875 GiB, 2.73% gc time)
+------------------------------
+starting box volume: 2.454220889014369e-8
+starting box count: 18446743788104340907
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xec7d) → ULP{16,2}(0x170d), ULP{16,2}(0xdfd7) → ULP{16,2}(0xe1a9), ULP{16,2}(0x2f1b) → ULP{16,2}(0x2f75), ULP{16,2}(0x3511) → ULP{16,2}(0x358b)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x07d9) → ULP{16,2}(0x1293), ULP{16,2}(0xe08b) → ULP{16,2}(0xe0eb), ULP{16,2}(0x2f3f) → ULP{16,2}(0x2f51), ULP{16,2}(0x3537) → ULP{16,2}(0x3565)]
+final box volume: 1.1189749127282766e-10
+final box count: 237947887
+99.54406104286005 % improvement in bounding box.
+243.708849 seconds (2.54 G allocations: 56.461 GiB, 2.77% gc time)
+------------------------------
+starting box volume: 2.6874477043747902e-5
+starting box count: 246124725
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x4915) → ULP{16,2}(0x4981), ULP{16,2}(0xc411) → ULP{16,2}(0xc591), ULP{16,2}(0x454f) → ULP{16,2}(0x45c1), ULP{16,2}(0xb443) → ULP{16,2}(0xb475)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x493d) → ULP{16,2}(0x4959), ULP{16,2}(0xc4a9) → ULP{16,2}(0xc4fb), ULP{16,2}(0x4567) → ULP{16,2}(0x45ad), ULP{16,2}(0xb443) → ULP{16,2}(0xb475)]
+final box volume: 9.135874279309064e-7
+final box count: 8715747
+96.60053876976392 % improvement in bounding box.
+  9.495097 seconds (98.01 M allocations: 2.182 GiB, 2.73% gc time)
+------------------------------
+starting box volume: 0.00016229983884841204
+starting box count: 14443374165
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3f23) → ULP{16,2}(0x4153), ULP{16,2}(0xcb25) → ULP{16,2}(0xcda5), ULP{16,2}(0x42bb) → ULP{16,2}(0x43cf), ULP{16,2}(0xbc31) → ULP{16,2}(0xbcc1)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x4049) → ULP{16,2}(0x40a1), ULP{16,2}(0xcc07) → ULP{16,2}(0xccc5), ULP{16,2}(0x42dd) → ULP{16,2}(0x43a1), ULP{16,2}(0xbc3b) → ULP{16,2}(0xbcb5)]
+final box volume: 5.6816224969225004e-6
+final box count: 411902769
+96.49930490551557 % improvement in bounding box.
+ 99.963192 seconds (1.04 G allocations: 23.049 GiB, 2.75% gc time)
+------------------------------
+starting box volume: 0.00018847495084628463
+starting box count: 12875871855
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbfc3) → ULP{16,2}(0xc4a7), ULP{16,2}(0xb9e1) → ULP{16,2}(0xbba3), ULP{16,2}(0x3651) → ULP{16,2}(0x36b9), ULP{16,2}(0x4e23) → ULP{16,2}(0x4efb)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xc1e5) → ULP{16,2}(0xc25d), ULP{16,2}(0xba3b) → ULP{16,2}(0xbb57), ULP{16,2}(0x3667) → ULP{16,2}(0x36a1), ULP{16,2}(0x4e33) → ULP{16,2}(0x4ee3)]
+final box volume: 4.943794920109212e-6
+final box count: 360126855
+97.37694855581034 % improvement in bounding box.
+ 58.115805 seconds (601.77 M allocations: 13.396 GiB, 2.76% gc time)
+------------------------------
+starting box volume: 7.939313206861698e-7
+starting box count: 3347083215
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x33c3) → ULP{16,2}(0x35c1), ULP{16,2}(0xc385) → ULP{16,2}(0xc40b), ULP{16,2}(0x25e3) → ULP{16,2}(0x2839), ULP{16,2}(0x3e77) → ULP{16,2}(0x3ec7)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x348f) → ULP{16,2}(0x3501), ULP{16,2}(0xc3b5) → ULP{16,2}(0xc3e1), ULP{16,2}(0x267b) → ULP{16,2}(0x27ef), ULP{16,2}(0x3e87) → ULP{16,2}(0x3eaf)]
+final box volume: 1.657298298596288e-8
+final box count: 79141275
+97.91254198516323 % improvement in bounding box.
+ 68.391030 seconds (711.81 M allocations: 15.844 GiB, 2.79% gc time)
+------------------------------
+starting box volume: 0.0013636046787723899
+starting box count: 768901815
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x547d) → ULP{16,2}(0x55a5), ULP{16,2}(0xa4a3) → ULP{16,2}(0xa539), ULP{16,2}(0x4d85) → ULP{16,2}(0x4e03), ULP{16,2}(0x3aaf) → ULP{16,2}(0x3b35)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x54b3) → ULP{16,2}(0x556f), ULP{16,2}(0xa4a3) → ULP{16,2}(0xa539), ULP{16,2}(0x4d85) → ULP{16,2}(0x4e03), ULP{16,2}(0x3ac5) → ULP{16,2}(0x3b19)]
+final box volume: 0.0005429115844890475
+final box count: 308078505
+60.18555869302138 % improvement in bounding box.
+ 28.394414 seconds (294.25 M allocations: 6.550 GiB, 2.78% gc time)
+------------------------------
+starting box volume: 0.0001767024859873345
+starting box count: 12240467925
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb8d5) → ULP{16,2}(0xbb09), ULP{16,2}(0x40c1) → ULP{16,2}(0x41a5), ULP{16,2}(0xc7ed) → ULP{16,2}(0xca3f), ULP{16,2}(0x4499) → ULP{16,2}(0x4537)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb9cd) → ULP{16,2}(0xba13), ULP{16,2}(0x4119) → ULP{16,2}(0x414b), ULP{16,2}(0xc8c1) → ULP{16,2}(0xc957), ULP{16,2}(0x44cb) → ULP{16,2}(0x4505)]
+final box volume: 4.32720526077901e-7
+final box count: 32259489
+99.75511350411396 % improvement in bounding box.
+ 12.416121 seconds (128.38 M allocations: 2.857 GiB, 2.78% gc time)
+------------------------------
+starting box volume: 1.477200697763692e-6
+starting box count: 3332203875
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3a69) → ULP{16,2}(0x3b75), ULP{16,2}(0x3551) → ULP{16,2}(0x3695), ULP{16,2}(0x2941) → ULP{16,2}(0x2a7b), ULP{16,2}(0xbffd) → ULP{16,2}(0xc075)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3add) → ULP{16,2}(0x3af9), ULP{16,2}(0x35bb) → ULP{16,2}(0x362d), ULP{16,2}(0x296b) → ULP{16,2}(0x2a45), ULP{16,2}(0xc01f) → ULP{16,2}(0xc04f)]
+final box volume: 1.4833062778052408e-8
+final box count: 35787885
+98.99586679044303 % improvement in bounding box.
+ 65.176539 seconds (674.90 M allocations: 15.024 GiB, 2.77% gc time)
+------------------------------
+starting box volume: 2.1391315385699272e-7
+starting box count: 8204625
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb47f) → ULP{16,2}(0xb4bf), ULP{16,2}(0x4363) → ULP{16,2}(0x437b), ULP{16,2}(0x4365) → ULP{16,2}(0x4397), ULP{16,2}(0x307b) → ULP{16,2}(0x30dd)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb491) → ULP{16,2}(0xb4ad), ULP{16,2}(0x4365) → ULP{16,2}(0x4375), ULP{16,2}(0x436d) → ULP{16,2}(0x438f), ULP{16,2}(0x3093) → ULP{16,2}(0x30c3)]
+final box volume: 2.0780134946107864e-8
+final box count: 845495
+90.28571428571429 % improvement in bounding box.
+  2.665866 seconds (27.49 M allocations: 626.687 MiB, 2.70% gc time)
+------------------------------
+starting box volume: 1.454370703868335e-7
+starting box count: 43162405
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3e41) → ULP{16,2}(0x3ecf), ULP{16,2}(0x417d) → ULP{16,2}(0x41b1), ULP{16,2}(0xc101) → ULP{16,2}(0xc143), ULP{16,2}(0x31cd) → ULP{16,2}(0x3221)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3e77) → ULP{16,2}(0x3e95), ULP{16,2}(0x418f) → ULP{16,2}(0x419f), ULP{16,2}(0xc111) → ULP{16,2}(0xc137), ULP{16,2}(0x31e5) → ULP{16,2}(0x320f)]
+final box volume: 2.7216628950554878e-9
+final box count: 883779
+98.12863193144884 % improvement in bounding box.
+  4.859289 seconds (50.13 M allocations: 1.116 GiB, 2.81% gc time)
+------------------------------
+starting box volume: 19117.44758605957
+starting box count: 668580651765
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x9c35) → ULP{16,2}(0xa369), ULP{16,2}(0x5be9) → ULP{16,2}(0x60b5), ULP{16,2}(0x9be7) → ULP{16,2}(0x9e4b), ULP{16,2}(0x649d) → ULP{16,2}(0x667d)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x9d89) → ULP{16,2}(0x9f7f), ULP{16,2}(0x5cf3) → ULP{16,2}(0x606f), ULP{16,2}(0x9bed) → ULP{16,2}(0x9e3f), ULP{16,2}(0x649d) → ULP{16,2}(0x667d)]
+final box volume: 5370.536727905273
+final box count: 128552783905
+71.90766861669617 % improvement in bounding box.
+130.945392 seconds (1.35 G allocations: 30.162 GiB, 2.77% gc time)
+------------------------------
+starting box volume: 1.187594762086519e-5
+starting box count: 1717996815
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x493f) → ULP{16,2}(0x49a9), ULP{16,2}(0x46e1) → ULP{16,2}(0x478b), ULP{16,2}(0x1eb9) → ULP{16,2}(0x22d7), ULP{16,2}(0xbd2f) → ULP{16,2}(0xbd87)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x495b) → ULP{16,2}(0x498d), ULP{16,2}(0x46e1) → ULP{16,2}(0x478b), ULP{16,2}(0x1f4d) → ULP{16,2}(0x2261), ULP{16,2}(0xbd2f) → ULP{16,2}(0xbd87)]
+final box volume: 4.188109414826613e-6
+final box count: 612397341
+64.73452436361032 % improvement in bounding box.
+310.933069 seconds (3.21 G allocations: 71.453 GiB, 2.77% gc time)
+------------------------------
+starting box volume: 81006.20028018951
+starting box count: 371315687575
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x50cb) → ULP{16,2}(0x6445), ULP{16,2}(0x979f) → ULP{16,2}(0x9979), ULP{16,2}(0x6433) → ULP{16,2}(0x6589), ULP{16,2}(0x97fd) → ULP{16,2}(0x99c5)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x6025) → ULP{16,2}(0x6199), ULP{16,2}(0x97a3) → ULP{16,2}(0x9965), ULP{16,2}(0x6437) → ULP{16,2}(0x6583), ULP{16,2}(0x97fd) → ULP{16,2}(0x99c5)]
+final box volume: 14618.939849853516
+final box count: 25600344363
+81.95330752548746 % improvement in bounding box.
+ 92.314342 seconds (955.28 M allocations: 21.264 GiB, 2.78% gc time)
+------------------------------
+starting box volume: 0.0028996798030220816
+starting box count: 1849393451115
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3997) → ULP{16,2}(0x41a3), ULP{16,2}(0xc2df) → ULP{16,2}(0xcdab), ULP{16,2}(0x33f5) → ULP{16,2}(0x3545), ULP{16,2}(0x3a57) → ULP{16,2}(0x3e19)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x3deb) → ULP{16,2}(0x3f45), ULP{16,2}(0xc639) → ULP{16,2}(0xc73d), ULP{16,2}(0x347b) → ULP{16,2}(0x34cd), ULP{16,2}(0x3bbd) → ULP{16,2}(0x3c89)]
+final box volume: 2.6731521529654856e-6
+final box count: 1540997505
+99.90781216083998 % improvement in bounding box.
+ 24.421450 seconds (252.44 M allocations: 5.619 GiB, 2.78% gc time)
+------------------------------
+starting box volume: 0.0009475534170633182
+starting box count: 4317643011
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xbf95) → ULP{16,2}(0xc4a9), ULP{16,2}(0x47dd) → ULP{16,2}(0x48ad), ULP{16,2}(0x40cd) → ULP{16,2}(0x411b), ULP{16,2}(0xaf1d) → ULP{16,2}(0xafe5)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xc177) → ULP{16,2}(0xc259), ULP{16,2}(0x4809) → ULP{16,2}(0x488f), ULP{16,2}(0x40cd) → ULP{16,2}(0x411b), ULP{16,2}(0xaf35) → ULP{16,2}(0xafcf)]
+final box volume: 8.271204205811955e-5
+final box count: 375248025
+91.2709889945347 % improvement in bounding box.
+ 29.276691 seconds (303.05 M allocations: 6.745 GiB, 2.77% gc time)
+------------------------------
+starting box volume: 2.115700681315502e-6
+starting box count: 46641059283
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x25fd) → ULP{16,2}(0x2bcd), ULP{16,2}(0xce15) → ULP{16,2}(0xcf25), ULP{16,2}(0x3c05) → ULP{16,2}(0x3cb7), ULP{16,2}(0x242f) → ULP{16,2}(0x26af)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0x2915) → ULP{16,2}(0x29b9), ULP{16,2}(0xce8b) → ULP{16,2}(0xceaf), ULP{16,2}(0x3c47) → ULP{16,2}(0x3c75), ULP{16,2}(0x2521) → ULP{16,2}(0x25c3)]
+final box volume: 2.442302360350368e-9
+final box count: 46770405
+99.88456295439524 % improvement in bounding box.
+ 57.239976 seconds (596.57 M allocations: 13.278 GiB, 2.79% gc time)
+------------------------------
+starting box volume: 1.5847035683691502e-6
+starting box count: 7675449
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb00f) → ULP{16,2}(0xb067), ULP{16,2}(0x4165) → ULP{16,2}(0x4197), ULP{16,2}(0xc32b) → ULP{16,2}(0xc383), ULP{16,2}(0x5023) → ULP{16,2}(0x5035)]
+SigmoidNumbers.Valid{16,2}[ULP{16,2}(0xb01f) → ULP{16,2}(0xb059), ULP{16,2}(0x4165) → ULP{16,2}(0x4197), ULP{16,2}(0xc32b) → ULP{16,2}(0xc383), ULP{16,2}(0x5023) → ULP{16,2}(0x5035)]
+final box volume: 1.0444637155160308e-6
+final box count: 5088219
+34.09090909090909 % improvement in bounding box.
+ 12.114039 seconds (125.30 M allocations: 2.789 GiB, 2.77% gc time)
