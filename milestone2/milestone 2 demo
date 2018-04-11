@@ -1,0 +1,63 @@
+#posit technology demo
+
+using SigmoidNumbers
+
+P8 = Posit{8,1}
+
+bits(P8(1))
+bits(P8(1), " ")
+bits(P8(16), " ")
+bits(P8(32), " ")
+bits(P8(48), " ")
+bits(P8(-48), " ")
+
+P8(3) * P8(5)
+Float64(ans)
+
+Float64(P8(3) + P8(5))
+Float64(P8(3) / P8(5))
+
+P32 = Posit{32,2}
+
+Float64(P32(3) / P32(5))
+bits(P32(3) / P32(5), " ")
+
+Valid{32,2}(3) / Valid{32,2}(5)
+describe(ans)
+
+q = Quire(P32)
+
+add!(q, P32(1e20))
+
+Float64(ans)
+
+add!(q, P32(1e-20))
+
+add!(q, P32(-1e20))
+
+add!(q, P32(-1e20))
+
+A = random_exact_matrix(P32, 100)
+y = exact_rowsum(A)
+
+println((sum(Float64.(A),2)[1], Float64(y[1])))
+
+println((Float64.(sum(A,2)[1]), Float64(y[1])))
+
+x = A \ y
+
+sum(abs.(Float64.(x) - 1.0)) / 100.0
+
+x32 = Float32.(A) \ Float32.(y)
+
+sum(abs.(Float64.(x32) - 1.0)) / 100.0
+
+x2 = SigmoidNumbers.refine(x, A, y)
+
+sum(abs.(Float64.(x2) - 1.0)) / 100.0
+
+A64 = Float64.(A)
+y64 = Float64.(y)
+x64 = A64 \ y64
+
+(x64 = x64 + A64 \ (y64 - A64 * x64); x64[1])
